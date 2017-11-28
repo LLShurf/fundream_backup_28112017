@@ -1,0 +1,44 @@
+.wrapper
+	width: 100vw
+	height: 100vh
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	text-align: center
+	h1
+		@extend %bold
+		color: $red
+		text-transform: uppercase
+		font-size: 56px
+		+lg(font-size, 30px)
+		+md(font-size, 24px)
+		+sm(font-size, 20px)
+		+xs(font-size, 16px)
+	p
+		@extend %zero
+		font-size: 34px
+		margin-top: 20px
+		+lg(font-size, 24px)
+		+md(font-size, 22px)
+		+sm(font-size, 20px)
+		+xs(font-size, 16px)
+	button
+		font-size: 24px
+		border: 2px solid $red
+		color: #fff
+		background-color: $red
+		outline: none
+		@extend %zero
+		text-transform: uppercase
+		padding: 10px 25px
+		transition: all .2s ease-out
+		margin-top: 20px
+		+lg(font-size, 24px)
+		+md(font-size, 22px)
+		+sm(font-size, 20px)
+		+xs(font-size, 16px)
+		&:hover
+			color: $red
+			background-color: transparent
+			cursor: pointer

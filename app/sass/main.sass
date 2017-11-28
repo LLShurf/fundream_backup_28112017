@@ -1,0 +1,1452 @@
+/* IMPORT FILES */
+@import "smart-grid"
+@import "colors"
+@import "settings"
+@import "fonts"
+@import "thanks_page"
+
+/* START DEVELOPE */
+.descriptor
+	display: flex
+	justify-content: center
+	padding: 10px 40px
+	+sm(padding, 10px 20px)
+	@extend %zero
+	.logotype
+		margin-right: 90px
+		+sm(margin-right, 20px)
+		img
+			+md(width, 150px)
+			height: auto
+		p
+			font-size: 16px
+			+md(font-size, 12px)
+			color: #000
+	.description
+		text-align: center
+		margin-right: 90px
+		+sm(margin-right, 20px)
+		+xs(display, none)
+		p
+			font-size: 16px
+			+md(font-size, 12px)
+			color: #000
+	.callback
+		display: flex
+		flex-direction: column
+		align-items: center
+		p
+			font-size: 16px
+			+md(font-size, 12px)
+			color: #000
+			margin-bottom: 5px
+		button
+			outline: none
+			border: none
+			font-size: 16px
+			color: #fff
+			text-decoration: none
+			padding: 7px 12px
+			+md(font-size, 10px)
+			+md(padding, 5px 10px)
+			background: $blue
+			text-transform: uppercase
+			box-shadow: 0 3px 5px 0 rgba(0,0,0,.5)
+			transition: box-shadow .2s ease-out
+			&:hover
+				box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+				cursor: pointer
+
+nav
+	margin: 10px 0 10px 0
+	+sm(display, none)
+	ul
+		display: flex
+		justify-content: center
+		li
+			list-style: none
+			margin-right: 50px
+			&:nth-child(5)
+				margin-right: 0
+			a
+				text-decoration: none
+				@extend %zero
+				color: $blue
+				font-size: 22px
+				+lg(font-size, 20px)
+				+md(font-size, 18px)
+				text-transform: uppercase
+				border-bottom: 2px solid transparent
+				transition: border-bottom .2s ease-out
+				&:hover
+					border-bottom: 2px solid $blue
+
+header
+	display: flex
+	justify-content: center
+	background: url('../img/main_bg.jpg') no-repeat center center
+	background-size: cover
+	padding-bottom: 250px
+	+md(padding, 0)
+	+sm(flex-direction, column)
+	.trade-advantage
+		width: 43vw
+		+sm(padding, 0 20px)
+		+sm(width, 100vw)
+		.plug-overlay
+			overflow: hidden
+			padding: 20px 0
+			+sm(width, 100vw)
+			.plug
+				transform: skew(-19deg) translateX(-50px)
+				box-shadow: 0 5px 7px 2px rgba(0,0,0,.5)
+				padding: 10px 0
+			.plug-blue
+				background: rgba(40,102,165,.8)
+				width: 100%
+				h1
+					@extend %title
+					margin-left: 70px
+					line-height: 50px
+					+md(line-height, 30px)
+					.subtitle
+						font-size: 24px
+						+lg(font-size, 20px)
+						+md(font-size, 18px)
+			.plug-red
+				background: rgba(225,61,61,.8)
+				margin-top: 20px
+				width: 70%
+				+lg(width, 70%)
+				+md(width, 40vw)
+				+sm(width, 90%)
+				p
+					@extend %zero
+					font-size: 26px
+					+lg(font-size, 20px)
+					color: #fff
+					transform: skew(19deg)
+					margin-left: 70px
+					text-shadow: 0 7px 7px rgba(0,0,0,.5)
+	.contact-form
+		padding: 20px 0
+		+sm(width, 100vw)
+		.form-plug
+			box-shadow: 0 5px 15px 0 rgba(0,0,0,.4)
+			padding: 20px
+			+lg(padding, 10px)
+			+lg(width, 30vw)
+			+md(width, 35vw)
+			+sm(width, 50%)
+			+xs(width, 70%)
+			+sm(margin, 0 auto)
+			width: 25vw
+			background: #fff
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			align-items: center
+			text-align: center
+			.new-offer
+				@extend %bold
+				font-size: 32px
+				+lg(font-size, 30px)
+				color: $orange
+				text-transform: uppercase
+				text-shadow: 0 3px 5px rgba(0,0,0,.4)
+				text-align: center
+			.sale-plug
+				margin: 30px
+				+lg(margin, 15px)
+				background: $red
+				padding: 7px 20px
+				width: 110%
+				height: 20%
+				box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+				p
+					@extend %bold
+					font-size: 20px
+					+lg(font-size, 16px)
+					color: #fff
+					text-transform: uppercase
+					text-align: center
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					text-shadow: 0 3px 5px rgba(0,0,0,.4)
+					.uppercase
+						font-size: 26px
+						+lg(font-size, 20px)
+			.sale-block
+				display: flex
+				justify-content: space-around
+				.prices
+					@extend %zero
+					.old-price
+						text-decoration: line-through
+						font-size: 26px
+						+lg(font-size, 22px)
+					.new-price-popover
+						text-decoration: none
+						color: $red
+						font-size: 34px
+						+lg(font-size, 30px)
+						margin-left: 30px
+				img
+					+lg(width, 150px)
+					+sm(width, 100px)
+					+sm(height, 40px)
+					height: auto
+			.trade-ship
+				@extend %zero
+				font-size: 14px
+				+lg(font-size, 11px)
+				font-weight: bold
+				margin: 20px 0
+			form
+				display: flex
+				margin-bottom: 20px
+				flex-direction: column
+				align-items: center
+				input
+					border: none
+					background: transparent
+					border-bottom: 2px solid $blue
+					outline: none
+					@extend %zero
+					font-size: 18px
+					width: 200px
+					margin-bottom: 30px
+				.button-box
+					display: flex
+					justify-content: center
+					button
+						border: none
+						outline: none
+						background: $red
+						@extend %med
+						font-size: 36px
+						+lg(font-size, 26px)
+						color: #fff
+						box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+						text-shadow: 0 3px 5px rgba(0,0,0,.4)
+						text-transform: uppercase
+						padding: 8px 40px
+						transition: all .2s ease-out
+						&:hover
+							cursor: pointer
+							box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+							transform: translateY(-5px)
+
+.advantages
+	padding: 20px 30px
+	+row-flex()
+	align-items: stretch
+	.icon-box
+		+col()
+		+col-xl-2()
+		+col-sm-6()
+		+col-xs-10()
+		+offset-xs(1)
+		+sm(margin-bottom, 20px)
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		img
+			width: 50px
+			height: auto
+			+md(width, 40px)
+		p
+			@extend %zero
+			font-size: 20px
+			+lg(font-size, 18px)
+			+md(font-size, 16px)
+			text-align: center
+
+#store
+	display: flex
+	flex-direction: column
+	align-items: center
+	.title-overlay
+		@extend %title-overlay
+		text-align: center
+		width: 30vw
+		h2
+			@extend %title
+	.cards-container
+		+row-flex()
+		padding: 0 190px
+		+md(padding, 0 100px)
+		+sm(padding, 0)
+		justify-content: center
+		.item-card
+			+col()
+			+col-xl-4()
+			+col-lg-6()
+			+col-sm-8()
+			+col-xs-10()
+			margin-bottom: 30px
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-around
+			box-shadow: 0 5px 7px 2px rgba(0,0,0,.5)
+			transition: all .2s ease-out
+			&:hover
+				box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+				transform: translateY(-5px)
+			.card-title
+				width: 100%
+				padding: 7px 0
+				background: $red
+				text-align: center
+				margin-bottom: 15px
+				p
+					@extend %zero
+					color: #fff
+					text-transform: uppercase
+					font-size: 20px
+			.more-info
+				@extend %zero
+				color: $red
+				border-bottom: 2px dashed $red
+				font-size: 16px
+				text-transform: uppercase
+				margin-bottom: 10px
+				opacity: 0
+				transition: all .2s ease-out
+				&:hover
+					cursor: pointer
+					transform: scale(1.1)
+			img
+				margin-bottom: 25px
+				+md(width, 200px)
+				&:hover
+					cursor: pointer
+			.price
+				@extend %zero
+				font-size: 38px
+				+sm(font-size, 30px)
+				text-transform: uppercase
+				color: $red
+				.old-price
+					color: #000
+					font-size: 24px
+					+sm(font-size, 18px)
+					text-decoration: line-through
+					margin-right: 15px
+			button
+				@extend %order-button
+	.form-overlay
+		position: fixed
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 100
+		background: rgba(0,0,0,.7)
+		transform: translateY(100%)
+		transition: transform .2s ease-out
+		.form-close
+			width: 37%
+			+md(width, 60%)
+			+sm(width, 70%)
+			+xs(width, 95%)
+			text-align: right
+			i
+				color: #fff
+				font-size: 32px
+				transition: color .2s ease-out
+				&:hover
+					cursor: pointer
+					color: darken(#fff, 10%)
+		.form-plug
+			box-shadow: 0 5px 15px 0 rgba(0,0,0,.4)
+			padding: 20px
+			+lg(padding, 10px)
+			width: 30%
+			+md(width, 50%)
+			+sm(width, 60%)
+			+xs(width, 80%)
+			background: #fff
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			align-items: center
+			.new-offer
+				@extend %bold
+				font-size: 36px
+				+lg(font-size, 30px)
+				+sm(font-size, 24px)
+				color: $orange
+				text-transform: uppercase
+				text-shadow: 0 3px 5px rgba(0,0,0,.4)
+				text-align: center
+			.sale-plug
+				margin: 30px
+				+lg(margin, 15px)
+				background: $red
+				padding: 7px 20px
+				width: 110%
+				height: 20%
+				box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+				p
+					@extend %bold
+					font-size: 20px
+					+lg(font-size, 16px)
+					+xs(font-size, 12px)
+					color: #fff
+					text-transform: uppercase
+					text-align: center
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					text-shadow: 0 3px 5px rgba(0,0,0,.4)
+					.uppercase
+						font-size: 26px
+						+lg(font-size, 20px)
+			.sale-block
+				display: flex
+				justify-content: space-around
+				.prices
+					@extend %zero
+					.old-price
+						text-decoration: line-through
+						font-size: 26px
+						+lg(font-size, 22px)
+					.new-price-popover
+						text-decoration: none
+						color: $red
+						font-size: 34px
+						+lg(font-size, 30px)
+						margin-left: 30px
+				img
+					+lg(width, 150px)
+					+sm(width, 100px)
+					+sm(height, 40px)
+					height: auto
+			.trade-ship
+				@extend %zero
+				font-size: 14px
+				+lg(font-size, 11px)
+				font-weight: bold
+				margin: 20px 0
+			form
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-bottom: 20px
+				input
+					border: none
+					background: transparent
+					border-bottom: 2px solid $blue
+					outline: none
+					@extend %zero
+					font-size: 18px
+					width: 200px
+					margin-bottom: 30px
+				.button-box
+					display: flex
+					justify-content: center
+					button
+						border: none
+						border: 3px solid transparent
+						outline: none
+						background: $red
+						@extend %med
+						font-size: 36px
+						+lg(font-size, 26px)
+						color: #fff
+						box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+						text-shadow: 0 3px 5px rgba(0,0,0,.4)
+						text-transform: uppercase
+						padding: 8px 40px
+						transition: all .2s ease-out
+						&:hover
+							cursor: pointer
+							box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+							background: transparent
+							border: 3px solid $red
+							color: $red
+					
+
+.bondmobile
+	display: flex
+	flex-direction: column
+	align-items: center
+	.title-overlay
+		@extend %title-overlay
+		text-align: center
+		width: 40vw
+		+lg(width, 45vw)
+		h3
+			@extend %title
+	.advantages-block
+		padding: 20px 30px
+		+row-flex()
+		align-items: stretch
+		.advantage
+			+col()
+			+col-xl-4()
+			+col-xs-8()
+			+offset-xs(2)
+			+xs(margin-bottom, 20px)
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-between
+			img
+				width: 90px
+				height: auto
+				+md(width, 70px)
+			p
+				@extend %zero
+				font-size: 20px
+				+md(font-size, 18px)
+				text-align: center
+	.section-bg
+		height: 55vh
+		width: 100vw
+		margin: 30px 0
+		background: url('../img/bond_bg.jpg') no-repeat center center
+		background-size: cover
+	.cards-container
+		+row-flex()
+		padding: 0 190px
+		+md(padding, 0 100px)
+		+sm(padding, 0)
+		justify-content: center
+		.item-card
+			+col()
+			+col-xl-4()
+			+col-lg-6()
+			+col-sm-8()
+			+col-xs-10()
+			margin-bottom: 30px
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-around
+			box-shadow: 0 5px 7px 2px rgba(0,0,0,.5)
+			transition: all .2s ease-out
+			&:hover
+				box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+				transform: translateY(-5px)
+			.card-title
+				width: 100%
+				padding: 7px 0
+				background: $red
+				text-align: center
+				margin-bottom: 15px
+				p
+					@extend %zero
+					color: #fff
+					text-transform: uppercase
+					font-size: 20px
+			.more-info
+				@extend %zero
+				color: $red
+				border-bottom: 2px dashed $red
+				font-size: 16px
+				text-transform: uppercase
+				margin-bottom: 10px
+				opacity: 0
+				transition: all .2s ease-out
+				&:hover
+					cursor: pointer
+					transform: scale(1.1)
+			img
+				margin-bottom: 25px
+				+md(width, 200px)
+				&:hover
+					cursor: pointer
+			.price
+				@extend %zero
+				font-size: 38px
+				+sm(font-size, 30px)
+				text-transform: uppercase
+				color: $red
+				.old-price
+					color: #000
+					font-size: 24px
+					+sm(font-size, 18px)
+					text-decoration: line-through
+					margin-right: 15px
+			button
+				@extend %order-button
+
+.options
+	display: flex
+	flex-direction: column
+	align-items: center
+	.title-overlay
+		@extend %title-overlay
+		text-align: center
+		width: 40vw
+		+lg(width, 55vw)
+		p
+			@extend %title
+	.cards-container
+		+row-flex()
+		padding: 0 190px
+		+md(padding, 0 100px)
+		+sm(padding, 0)
+		justify-content: center
+		.item-card
+			+col()
+			+col-xl-4()
+			+col-lg-6()
+			+col-sm-8()
+			+col-xs-10()
+			margin-bottom: 30px
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: space-between
+			box-shadow: 0 5px 7px 2px rgba(0,0,0,.5)
+			transition: all .2s ease-out
+			&:hover
+				box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+				transform: translateY(-5px)
+			.card-title
+				width: 100%
+				padding: 7px 0
+				background: $red
+				text-align: center
+				margin-bottom: 15px
+				z-index: 10
+				p
+					@extend %zero
+					color: #fff
+					text-transform: uppercase
+					font-size: 18px
+			.without
+				margin: 0
+			img
+				margin-bottom: 25px
+				margin-top: -15px
+				&:hover
+					cursor: pointer
+			.more-info
+				@extend %zero
+				color: $red
+				border-bottom: 2px dashed $red
+				font-size: 16px
+				text-transform: uppercase
+				margin-bottom: 10px
+				opacity: 0
+				transition: all .2s ease-out
+				&:hover
+					cursor: pointer
+					transform: scale(1.1)
+			.image-jp
+				width: 100%
+			.price
+				@extend %zero
+				font-size: 38px
+				+sm(font-size, 30px)
+				text-transform: uppercase
+				color: $red
+				.old-price
+					color: #000
+					font-size: 24px
+					+sm(font-size, 18px)
+					text-decoration: line-through
+					margin-right: 15px
+			button
+				@extend %order-button
+
+#base-benefits
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 0 190px
+	.title-overlay
+		@extend %title-overlay
+		text-align: center
+		width: 50vw
+		+lg(width, 60vw)
+		+md(width, 50vw)
+		+xs(width, 70vw)
+		h4
+			@extend %title
+	.infograph img
+		height: auto
+		width: 80vw
+
+.gallery
+	display: flex
+	flex-direction: column
+	align-items: center
+	.title-overlay
+		@extend %title-overlay
+		text-align: center
+		width: 50vw
+		+lg(width, 60vw)
+		p
+			@extend %title
+	.sld-win
+		width: 65vw
+		+sm(width, 80vw)
+		margin: 0 auto
+
+#feedback
+	display: flex
+	flex-direction: column
+	align-items: center
+	.title-overlay
+		@extend %title-overlay
+		text-align: center
+		width: 30vw
+		h5
+			@extend %title
+	.slider-overlay__feed
+		width: 70vw
+		.feed-slide-win
+			display: flex
+			align-items: center
+			+sm(display, block)
+			+sm(align-items, stretch)
+			.item-feed
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: space-around
+				img
+					border-radius: 50%
+					margin-bottom: 30px
+					width: 320px
+					height: auto
+					+md(width, 220px)
+					+xs(width, 180px)
+				p
+					@extend %zero
+					font-size: 20px
+					+md(font-size, 16px)
+					+xs(font-size, 12px)
+					font-style: italic
+					color: #000
+					text-align: center
+				.name-overlay
+					@extend %title-overlay
+					margin: 20px 0
+					width: 10vw
+					+lg(width, 15vw)
+					+sm(width, 20vw)
+					+xs(width, 23vw)
+					transform: skew(0)
+					.name
+						@extend %title
+						transform: skew(0)
+						font-size: 22px
+						+md(font-size, 20px)
+						+xs(font-size, 16px)
+						font-style: normal
+
+#how-we-works
+	display: flex
+	flex-direction: column
+	align-items: center
+	.title-overlay
+		@extend %title-overlay
+		text-align: center
+		width: 30vw
+		+lg(width, 40vw)
+		margin-top: 0
+		h6
+			@extend %title
+	.blocks-container
+		display: flex
+		justify-content: space-around
+		+lg(width, 90vw)
+		+sm(width, 70vw)
+		+sm(flex-direction, column)
+		+xs(width, 90vw)
+		.safety-trade
+			display: flex
+			flex-direction: column
+			align-items: center
+			flex-basis: 40%
+			background: #fff
+			box-shadow: 0 5px 15px 0 rgba(0,0,0,.4)
+			padding: 20px
+			+sm(padding, 10px)
+			+sm(margin-bottom, 20px)
+			.title-overlay
+				@extend %title-overlay
+				text-align: center
+				width: 20vw
+				+lg(width, 30vw)
+				+sm(width, 35vw)
+				+xs(width, 45vw)
+				margin: 10px 0 40px 0
+				p
+					@extend %title
+					font-size: 24px
+					+md(font-size, 20px)
+					+sm(font-size, 18px)
+					+xs(font-size, 16px)
+			.steps-block
+				display: flex
+				flex-direction: column
+				align-items: center
+				.step
+					display: flex
+					align-items: center
+					margin-bottom: 20px
+					width: 70%
+					img
+						margin-right: 30px
+						+md(width, 50px)
+						height: auto
+					p
+						@extend %zero
+						font-size: 18px
+						+lg(font-size, 14px)
+						color: #000
+		.form-plug
+			box-shadow: 0 5px 15px 0 rgba(0,0,0,.4)
+			padding: 20px
+			+lg(padding, 10px)
+			background: #fff
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			align-items: center
+			flex-basis: 40%
+			.new-offer
+				@extend %bold
+				font-size: 40px
+				+lg(font-size, 30px)
+				color: $orange
+				text-transform: uppercase
+				text-shadow: 0 3px 5px rgba(0,0,0,.4)
+				text-align: center
+			.sale-plug
+				margin: 30px
+				+lg(margin, 15px)
+				background: $red
+				padding: 7px 20px
+				width: 110%
+				height: 15%
+				+md(height, 12%)
+				box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+				display: flex
+				align-items: center
+				justify-content: center
+				p
+					@extend %bold
+					font-size: 20px
+					+lg(font-size, 16px)
+					color: #fff
+					text-transform: uppercase
+					text-align: center
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					text-shadow: 0 3px 5px rgba(0,0,0,.4)
+					.uppercase
+						font-size: 26px
+						+lg(font-size, 20px)
+			.sale-block
+				display: flex
+				justify-content: space-around
+				.prices
+					@extend %zero
+					.old-price
+						text-decoration: line-through
+						font-size: 26px
+						+lg(font-size, 22px)
+					.new-price-popover
+						text-decoration: none
+						color: $red
+						font-size: 34px
+						+lg(font-size, 30px)
+						margin-left: 30px
+				img
+					+lg(width, 150px)
+					+sm(width, 100px)
+					+sm(height, 40px)
+					height: auto
+			.trade-ship
+				@extend %zero
+				font-size: 14px
+				+lg(font-size, 11px)
+				font-weight: bold
+				margin: 20px 0
+			form
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-bottom: 20px
+				input
+					border: none
+					background: transparent
+					border-bottom: 2px solid $blue
+					outline: none
+					@extend %zero
+					font-size: 18px
+					width: 200px
+					margin-bottom: 30px
+				.button-box
+					display: flex
+					justify-content: center
+					button
+						border: none
+						outline: none
+						background: $red
+						border: 3px solid transparent
+						@extend %med
+						font-size: 36px
+						+lg(font-size, 26px)
+						+md(font-size, 24px)
+						+md(padding, 5px 30px)
+						color: #fff
+						box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+						text-shadow: 0 3px 5px rgba(0,0,0,.4)
+						text-transform: uppercase
+						padding: 8px 40px
+						transition: all .2s ease-out
+						&:hover
+							cursor: pointer
+							box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+							background: transparent
+							border: 3px solid $red
+							color: $red
+
+#contacts
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 10px 0
+	.title-overlay
+		@extend %title-overlay
+		text-align: center
+		width: 40vw
+		+lg(width, 50vw)
+		+md(width, 45vw)
+		position: relative
+		img
+			position: absolute
+			transform: skew(19deg)
+			width: 300px
+			+lg(width, 250px)
+			+md(width, 200px)
+			+sm(width, 160px)
+			height: auto
+		.left
+			left: -30%
+			+sm(top, 40%)
+		.right
+			right: -30%
+			top: -30%
+			+sm(top, 40%)
+		p
+			@extend %title
+	.bottom-form-overlay
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-around
+		width: 60vw
+		+sm(width, 90vw)
+		background: #fff
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+		margin-top: 120px
+		.bottom-form-plug
+			width: 100%
+			background: $blue
+			text-align: center
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+			padding: 15px 0
+			margin-bottom: 50px
+			+sm(margin-bottom, 10px)
+			p
+				@extend %med
+				font-size: 20px
+				+md(font-size, 16px)
+				+xs(font-size, 14px)
+				color: $yell
+				text-transform: uppercase
+				text-shadow: 0 3px 5px rgba(0,0,0,.4)
+		form
+			width: 100%
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			margin-bottom: 40px
+			+sm(flex-direction, column)
+			input
+				border: none
+				outline: none
+				border-bottom: 2px solid $blue
+				@extend %zero
+				font-size: 18px
+				+md(font-size, 16px)
+				width: 45%
+				+sm(width, 90%)
+				+sm(margin, 0 auto)
+				+sm(margin-bottom, 30px)
+				margin-bottom: 30px
+			.name-in
+				margin-right: 50px
+				+sm(margin, 30px auto)
+			button
+				border: none
+				border: 3px solid transparent
+				outline: none
+				background: $red
+				color: #fff
+				@extend %med
+				margin: 0 auto
+				text-transform: uppercase
+				font-size: 20px
+				width: 50%
+				+md(font-size, 18px)
+				+sm(width, 90%)
+				box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+				text-shadow: 0 3px 5px rgba(0,0,0,.4)
+				padding: 7px 10px
+				margin-bottom: 25px
+				transition: all .2s ease-out
+				&:hover
+					cursor: pointer
+					box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+					background: transparent
+					border: 3px solid $red
+					color: $red
+
+footer
+	display: flex
+	justify-content: center
+	border-top: 4px solid $blue
+	margin-top: 40px
+	padding: 40px
+	+lg(padding, 30px 20px)
+	+md(flex-direction, column)
+	+md(flex-wrap, wrap)
+	background: url('../img/footer_bg.jpg') no-repeat center center
+	background-size: cover
+	@extend %zero
+	.contacts-block
+		background: rgba(255,255,255,.9)
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+		padding: 20px
+		flex-basis: 35%
+		+md(flex-basis, 90%)
+		.logotype
+			margin-bottom: 30px
+			p
+				font-size: 16px
+				color: #000
+		.contacts
+			p
+				text-transform: uppercase
+				font-size: 18px
+				+sm(font-size, 14px)
+				margin-bottom: 15px
+				.orange-text
+					font-size: 22px
+					+sm(font-size, 16px)
+					color: $orange
+					margin-right: 10px
+		.callback
+			display: flex
+			flex-direction: column
+			width: 60%
+			+lg(width, 70%)
+			+md(width, 40%)
+			+sm(width, 90%)
+			margin-top: 30px
+			p
+				font-size: 16px
+				color: #000
+				margin-bottom: 5px
+			button
+				outline: none
+				border: none
+				font-size: 16px
+				color: #fff
+				padding: 7px 12px
+				background: $blue
+				text-transform: uppercase
+				box-shadow: 0 3px 5px 0 rgba(0,0,0,.5)
+				transition: box-shadow .2s ease-out
+				&:hover
+					box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+					cursor: pointer
+	.ya-map
+		iframe
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,.5)
+			margin-right: 50px
+			+md(margin-right, 0)
+			+md(width, 100%)
+			+md(margin-bottom, 20px)
+
+
+/* POPup Windows */
+
+.popup-overlay
+	position: fixed
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 100
+	height: 100vh
+	background: rgba(0,0,0,.7)
+	transform: translateY(100%)
+	transition: transform .2s ease-out
+	.pop-close
+		width: 75%
+		text-align: right
+		+md(width, 80%)
+		+sm(width, 100%)
+		i
+			color: #fff
+			font-size: 32px
+			transition: color .2s ease-out
+			&:hover
+				cursor: pointer
+				color: darken(#fff, 10%)
+	.popup
+		width: 70%
+		display: flex
+		background: #fff
+		padding: 10px
+		+md(flex-wrap, wrap)
+		+md(height, 700px)
+		+sm(width, 90%)
+		overflow: auto
+		.picture
+			width: 60%
+			+md(flex-basis, 100%)
+			img
+				width: 100%
+				height: auto
+		.description
+			width: 40%
+			+md(flex-basis, 100%)
+			+md(margin-left, 0)
+			margin-left: 20px
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			.pop-title
+				@extend %bold
+				font-size: 28px
+				margin-bottom: 20px
+				+md(margin-bottom, 10px)
+				+sm(font-size, 22px)
+				color: $red
+				text-transform: uppercase
+			.pop-desc
+				@extend %zero
+				font-size: 20px
+				+sm(font-size, 16px)
+				+xs(font-size, 14px)
+				color: $red
+				text-transform: uppercase
+				margin: 0 10px 20px 0
+				span
+					color: #000
+					font-size: 18px
+					+sm(font-size, 14px)
+					+xs(font-size, 14px)
+					margin-left: 10px
+					text-transform: none
+			.pop-prices
+				display: flex
+				justify-content: center
+				@extend %zero
+				.pop-price
+					text-decoration: line-through
+					font-size: 22px
+					+md(font-size, 20px)
+					+sm(font-size, 18px)
+				.new-price
+					color: $red
+					font-size: 36px
+					+md(font-size, 32px)
+					+md(font-size, 26px)
+					margin-left: 30px
+			.pop-btn-block
+				display: flex
+				justify-content: center
+				// flex-basis: 100%
+				button
+					@extend %med
+					color: #fff
+					border: 3px solid transparent
+					outline: none
+					font-size: 22px
+					background: $red
+					margin-top: 10px
+					padding: 10px 40px
+					text-transform: uppercase
+					box-shadow: 0 3px 5px 0 rgba(0,0,0,.5)
+					transition: all .2s ease-out
+					+xs(font-size, 18px)
+					+xs(padding, 7px 25px)
+					&:hover
+						box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+						color: $red
+						background: transparent
+						border: 3px solid $red
+						cursor: pointer
+
+
+.popup-overlay-bond
+	position: fixed
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 100
+	height: 100vh
+	background: rgba(0,0,0,.7)
+	transform: translateY(100%)
+	transition: transform .2s ease-out
+	.pop-close
+		width: 75%
+		text-align: right
+		+md(width, 80%)
+		+sm(width, 100%)
+		i
+			color: #fff
+			font-size: 32px
+			transition: color .2s ease-out
+			&:hover
+				cursor: pointer
+				color: darken(#fff, 10%)
+	.popup
+		width: 70%
+		display: flex
+		background: #fff
+		padding: 10px
+		+md(flex-wrap, wrap)
+		+md(height, 700px)
+		+sm(width, 90%)
+		overflow: auto
+		.picture
+			width: 60%
+			+md(flex-basis, 100%)
+			img
+				width: 100%
+				height: auto
+		.description
+			width: 40%
+			+md(flex-basis, 100%)
+			+md(margin-left, 0)
+			margin-left: 20px
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			.pop-title
+				@extend %bold
+				font-size: 28px
+				margin-bottom: 20px
+				+md(margin-bottom, 10px)
+				+sm(font-size, 22px)
+				color: $red
+				text-transform: uppercase
+			.pop-desc
+				@extend %zero
+				font-size: 20px
+				+sm(font-size, 16px)
+				+xs(font-size, 14px)
+				color: $red
+				text-transform: uppercase
+				margin: 0 10px 20px 0
+				span
+					color: #000
+					font-size: 18px
+					+sm(font-size, 14px)
+					+xs(font-size, 14px)
+					margin-left: 10px
+					text-transform: none
+			.pop-prices
+				display: flex
+				justify-content: center
+				@extend %zero
+				.pop-price
+					text-decoration: line-through
+					font-size: 22px
+					+md(font-size, 20px)
+					+sm(font-size, 18px)
+				.new-price
+					color: $red
+					font-size: 36px
+					+md(font-size, 32px)
+					+md(font-size, 26px)
+					margin-left: 30px
+			.pop-btn-block
+				display: flex
+				justify-content: center
+				button
+					@extend %med
+					color: #fff
+					border: 3px solid transparent
+					outline: none
+					font-size: 22px
+					background: $red
+					margin-top: 10px
+					padding: 10px 40px
+					text-transform: uppercase
+					box-shadow: 0 3px 5px 0 rgba(0,0,0,.5)
+					transition: all .2s ease-out
+					+xs(font-size, 18px)
+					+xs(padding, 7px 25px)
+					&:hover
+						box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+						color: $red
+						background: transparent
+						border: 3px solid $red
+						cursor: pointer
+
+.popup-overlay-opt
+	position: fixed
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 100
+	height: 100vh
+	background: rgba(0,0,0,.7)
+	transform: translateY(100%)
+	transition: transform .2s ease-out
+	.pop-close
+		width: 75%
+		text-align: right
+		+md(width, 80%)
+		+sm(width, 100%)
+		i
+			color: #fff
+			font-size: 32px
+			transition: color .2s ease-out
+			&:hover
+				cursor: pointer
+				color: darken(#fff, 10%)
+	.popup
+		width: 70%
+		display: flex
+		background: #fff
+		padding: 10px
+		+md(flex-wrap, wrap)
+		+md(height, 700px)
+		+sm(width, 90%)
+		overflow: auto
+		.picture
+			width: 60%
+			+md(flex-basis, 100%)
+			img
+				width: 100%
+				height: auto
+		.description
+			width: 40%
+			+md(flex-basis, 100%)
+			+md(margin-left, 0)
+			margin-left: 20px
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			.pop-title
+				@extend %bold
+				font-size: 28px
+				margin-bottom: 20px
+				+md(margin-bottom, 10px)
+				+sm(font-size, 22px)
+				color: $red
+				text-transform: uppercase
+			.pop-desc
+				@extend %zero
+				font-size: 20px
+				+sm(font-size, 16px)
+				+xs(font-size, 14px)
+				color: #000
+				text-transform: uppercase
+				margin: 0 10px 20px 0
+				span
+					color: #000
+					font-size: 18px
+					+sm(font-size, 14px)
+					+xs(font-size, 14px)
+					margin-left: 10px
+					text-transform: none
+			.pop-prices
+				display: flex
+				justify-content: center
+				@extend %zero
+				.pop-price
+					text-decoration: line-through
+					font-size: 22px
+					+md(font-size, 20px)
+					+sm(font-size, 18px)
+				.new-price
+					color: $red
+					font-size: 36px
+					+md(font-size, 32px)
+					+md(font-size, 26px)
+					margin-left: 30px
+			.pop-btn-block
+				display: flex
+				justify-content: center
+				button
+					@extend %med
+					color: #fff
+					border: 3px solid transparent
+					outline: none
+					font-size: 22px
+					background: $red
+					margin-top: 10px
+					padding: 10px 40px
+					text-transform: uppercase
+					box-shadow: 0 3px 5px 0 rgba(0,0,0,.5)
+					transition: all .2s ease-out
+					+xs(font-size, 18px)
+					+xs(padding, 7px 25px)
+					&:hover
+						box-shadow: 0 8px 10px 0 rgba(0,0,0,.4)
+						color: $red
+						background: transparent
+						border: 3px solid $red
+						cursor: pointer
+
+.sld-arr__prev, .sld-arr__next
+	border: 3px solid $red
+	background: transparent
+	outline: none
+	font-size: 30px
+	color: $red
+	padding: 19px 31px
+	border-radius: 50%
+	+sm(display, none)
+	+sm(visibility, hidden)
+	transition: all .2s ease-out
+	&:hover
+		cursor: pointer
+		color: #fff
+		background: $red
+.slick-arrow
+	+sm(display, none)
+	+sm(visibility, hidden)
